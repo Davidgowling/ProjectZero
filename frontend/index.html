@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Zero – Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            font-size: 22px;
+            margin: 0 0 24px 0;
+            text-align: center;
+        }
+
+        .field {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #1f2a44;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 12px;
+            padding: 14px;
+            background: #1f2a44;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #162033;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Register</h1>
+
+        <form>
+            <div class="field">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name">
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com">
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+</body>
+</html>
