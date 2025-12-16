@@ -84,20 +84,40 @@
     <div class="card">
         <h1>Register</h1>
 
-        <form>
+        <form id="registerForm">
             <div class="field">
                 <label for="name">Name</label>
-                <input id="name" type="text" placeholder="Your name">
+                <input id="name" type="text" required>
             </div>
 
             <div class="field">
                 <label for="email">Email</label>
-                <input id="email" type="email" placeholder="you@example.com">
+                <input id="email" type="email" required>
             </div>
 
             <button type="submit">Register</button>
         </form>
     </div>
+
+    <script>
+        const form = document.getElementById('registerForm');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // stop page refresh
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            const data = {
+                name: name,
+                email: email
+            };
+
+            console.log('Form submitted:', data);
+
+            // This is where the API call will go next
+        });
+    </script>
 
 </body>
 </html>
