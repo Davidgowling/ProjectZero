@@ -99,25 +99,30 @@
         </form>
     </div>
 
-    <script>
-        const form = document.getElementById('registerForm');
+<script>
+    const form = document.getElementById('registerForm');
 
-        form.addEventListener('submit', function (event) {
-            event.preventDefault(); // stop page refresh
+    form.addEventListener('submit', async function (event) {
+        event.preventDefault();
 
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
 
-            const data = {
-                name: name,
-                email: email
-            };
+        console.log('Submitting to API...', { name, email });
 
-            console.log('Form submitted:', data);
-
-            // This is where the API call will go next
+        const response = await fetch('http://localhost:3000/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email })
         });
-    </script>
+
+        const result = await response.json();
+        console.log('API response:', result);
+    });
+</script>
+
 
 </body>
 </html>
